@@ -18,3 +18,19 @@ PermitPasswordAuthentication Using Password without KeyPair
    PasswordAuthentication yes
 2. restart ssh:
    $ /etc/init.d/ssh restart
+
+Installing Ruby2.0.0 and Higher Version on Ubuntu and other Debian Distribution
+-------------------------------------------------------------------------------
+1. Following installation is for Ruby2.0.0.
+2. If you want to install latest version, download it from https://www.ruby-lang.org/en/downloads/
+   to /tmp directory and follow the same steps.
+
+      sudo apt-get -y update
+      sudo apt-get -y install build-essential zlib1g-dev libssl-dev libreadline6-dev libyaml-dev
+      cd /tmp
+      wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.gz
+      tar -xvzf ruby-2.0.0-p481.tar.gz
+      cd ruby-2.0.0-p481/
+      ./configure --prefix=/usr/local
+      make
+      sudo make install
